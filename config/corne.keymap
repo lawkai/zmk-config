@@ -135,5 +135,14 @@
                         &kp F10  &trans  &trans    &trans     &trans  &kp N0
             >;
         };
+
+        layer_5 {
+            bindings = <
+&trans  &kp GRAVE  &kp AT      &kp LBRC  &kp RBRC  &kp MINUS       &trans    &trans    &trans  &trans     &trans    &trans
+&trans  &kp EXCL   &kp HASH    &kp LPAR  &kp RPAR  &kp EQUAL       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp APOS  &trans
+&trans  &kp PRCNT  &kp DOLLAR  &kp LBKT  &kp RBKT  &kp QUESTION    &trans    &trans    &trans  &trans     &kp BSLH  &trans
+                               &trans    &trans    &trans          &trans    &trans    &trans
+            >;
+        };
     };
 };
