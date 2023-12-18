@@ -47,7 +47,7 @@
             label = "LAYER_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&to 1>;
+            bindings = <&mo 1>, <&sl 2>;
         };
 
         ld2: layer_dance_2 {
@@ -56,27 +56,6 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 2>, <&to 2>;
-        };
-
-        lpbb: LPAR_BRA_BKT {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LPAR_BRA_BKT";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp LBRC>, <&kp LBKT>;
-        };
-
-        rpbb: RPAR_BRA_BKT {
-            compatible = "zmk,behavior-tap-dance";
-            label = "RPAR_BRA_BKT";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp RBRC>, <&kp RBKT>;
-        };
-
-        globe_cmd: globe_cmd {
-            compatible = "zmk,behavior-tap-dance";
-            label = "GLOBE_CMD";
-            #binding-cells = <0>;
-            bindings = <&kp LCMD>, <&kp GLOBE>;
         };
     };
 };
