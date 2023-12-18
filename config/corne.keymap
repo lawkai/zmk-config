@@ -57,6 +57,24 @@
             tapping-term-ms = <200>;
             bindings = <&mo 2>, <&to 2>;
         };
+
+        nine_and_under: nine_and_under {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NINE_AND_UNDER";
+            bindings = <&kp N9>, <&kp UNDER>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        zero_and_equal: zero_and_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ZERO_AND_EQUAL";
+            bindings = <&kp N0>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 };
 
@@ -85,10 +103,10 @@
 
         num_layer {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6     &kp N7    &kp N8    &kp N9     &kp N0    &trans
-&trans     &trans  &trans  &trans  &trans  &trans    &kp MINUS  &kp LBKT  &kp RBKT  &kp EQUAL  &kp APOS  &kp BSLH
-&trans     &trans  &trans  &trans  &trans  &trans    &trans     &trans    &trans    &trans     &trans    &trans
-                           &trans  &trans  &trans    &trans     &trans    &trans
+&kp GRAVE  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6     &kp N7    &kp N8    &nine_and_under  &zero_and_equal  &trans
+&trans     &kp APOS  &kp LBKT  &kp LBRC  &kp LPAR  &kp PLUS    &kp MINUS  &kp RPAR  &kp RBRC  &kp RBKT         &kp DQT          &kp BSLH
+&trans     &trans    &trans    &trans    &trans    &trans      &trans     &trans    &trans    &trans           &trans           &trans
+                               &trans    &trans    &trans      &trans     &trans    &trans
             >;
 
             label = "Num";
