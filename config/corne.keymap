@@ -115,10 +115,10 @@
 
         lower_layer {
             bindings = <
-&trans     &kp N1    &kp N2   &kp N3    &kp N4    &kp N5       &trans    &trans    &trans  &trans     &trans  &trans
-&kp TILDE  &kp APOS  &kp DQT  &kp LBRC  &kp LPAR  &kp LBKT     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&kp GRAVE  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &trans    &trans    &trans  &trans     &trans  &trans
-                              &trans    &trans    &trans       &trans    &trans    &trans
+&trans     &kp N1    &kp N2   &kp N3    &kp N4    &kp N5       &trans  &trans    &kp UP    &trans     &trans  &trans
+&kp TILDE  &kp APOS  &kp DQT  &kp LBRC  &kp LPAR  &kp LBKT     &trans  &kp DOWN  &kp DOWN  &kp RIGHT  &trans  &trans
+&kp GRAVE  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &trans  &trans    &trans    &trans     &trans  &trans
+                              &trans    &trans    &trans       &trans  &trans    &trans
             >;
 
             label = "Lower";
