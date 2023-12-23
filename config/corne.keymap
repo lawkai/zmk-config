@@ -56,7 +56,7 @@
             label = "LAYER_DANCE_2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 2>, <&to 2>;
+            bindings = <&mo 0>, <&to 0>;
         };
 
         nine_and_under: nine_and_under {
@@ -126,10 +126,10 @@
 
         raise_layer {
             bindings = <
-&trans  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5    &kp F6  &kp F7    &kp F8    &kp F9     &kp F10  &trans
-&trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &trans  &trans    &kp UP    &trans     &trans   &trans
-&trans  &trans  &mkp MB4   &trans     &mkp MB5   &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &trans
-                           &trans     &trans     &trans    &trans  &trans    &trans
+&kp F1  &kp F2    &kp F3     &kp F4     &kp F5     &kp F6      &kp F7    &kp F8    &kp F9  &kp F10    &kp F11  &kp F12
+&trans  &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
+&trans  &trans    &trans     &trans     &trans     &trans      &trans    &trans    &trans  &trans     &trans   &trans
+                             &trans     &trans     &trans      &trans    &trans    &trans
             >;
 
             label = "Raise";
