@@ -59,26 +59,6 @@
             bindings = <&mo 0>, <&to 0>;
         };
 
-        nine_and_under: nine_and_under {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NINE_AND_UNDER";
-            bindings = <&kp N9>, <&kp MINUS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
-        };
-
-        zero_and_equal: zero_and_equal {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ZERO_AND_EQUAL";
-            bindings = <&kp N0>, <&kp EQUAL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
-        };
-
         mosl: mosl {
             compatible = "zmk,behavior-hold-tap";
             label = "MOSL";
@@ -126,10 +106,10 @@
 
         raise_layer {
             bindings = <
-&kp F1  &kp F2    &kp F3     &kp F4     &kp F5     &kp F6      &kp F7    &kp F8    &kp F9  &kp F10    &kp F11  &kp F12
-&trans  &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
-&trans  &trans    &trans     &trans     &trans     &trans      &trans    &trans    &trans  &trans     &trans   &trans
-                             &trans     &trans     &trans      &trans    &trans    &trans
+&kp F1  &kp F2    &kp F3     &kp F4     &kp F5     &kp F6       &kp F7     &kp F8    &kp F9  &kp F10    &kp F11  &kp F12
+&trans  &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5     &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
+&trans  &trans    &trans     &trans     &trans     &trans       &trans     &trans    &trans  &trans     &trans   &trans
+                             &trans     &trans     &kp LCTRL    &kp RCTRL  &trans    &trans
             >;
 
             label = "Raise";
