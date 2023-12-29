@@ -86,19 +86,19 @@
         default_layer {
             label = "Base";
             bindings = <
-&gresc         &kp Q  &kp W  &kp E     &kp R  &kp T       &kp Y        &kp U  &kp I      &kp O    &kp P     &bspcdel
-&mt LCTRL TAB  &kp A  &kp S  &kp D     &kp F  &kp G       &kp H        &kp J  &kp K      &kp L    &kp SEMI  &mt RCTRL RET
-&kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B       &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                             &kp LALT  &sl 1  &kp LGUI    &lt 2 SPACE  &sl 1  &kp RALT
+&gresc         &kp Q  &kp W  &kp E     &kp R      &kp T          &kp Y        &kp U      &kp I      &kp O    &kp P     &bspcdel
+&mt LCTRL TAB  &kp A  &kp S  &kp D     &kp F      &kp G          &kp H        &kp J      &kp K      &kp L    &kp SEMI  &mt RCTRL RET
+&kp LGUI       &kp Z  &kp X  &kp C     &kp V      &kp B          &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+                             &kp LALT  &kp LSHFT  &lt 1 SPACE    &lt 2 SPACE  &kp RSHFT  &kp RGUI
             >;
         };
 
         lower_layer {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4    &kp N5    &kp N6  &kp N7    &kp N8     &kp N9     &kp N0   &kp BSLH
-&trans     &trans  &trans  &trans  &kp LBKT  &trans    &trans  &kp RBKT  &kp MINUS  &kp EQUAL  &kp SQT  &trans
-&trans     &trans  &trans  &trans  &trans    &trans    &trans  &trans    &trans     &trans     &trans   &trans
-                           &trans  &trans    &trans    &trans  &trans    &trans
+&kp GRAVE  &kp N1     &kp N2    &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9     &kp N0     &trans
+&kp DQT    &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK  &kp MINUS  &kp EQUAL  &kp SQT
+&kp COLON  &kp UNDER  &kp LPAR  &kp LBRC  &kp LBKT  &kp PIPE     &kp BSLH   &kp RBKT  &kp RBRC   &kp RPAR   &kp PLUS   &kp SEMICOLON
+                                &trans    &trans    &trans       &trans     &trans    &trans
             >;
 
             label = "Lower";
