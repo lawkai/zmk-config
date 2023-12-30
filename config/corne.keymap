@@ -13,6 +13,7 @@
 &lt {
     retro-tap;
     quick-tap-ms = <100>;
+    tapping-term-ms = <300>;
 };
 
 &mt {
