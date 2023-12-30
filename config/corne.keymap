@@ -11,6 +11,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &lt {
+    flavor = "balanced";
+    retro-tap;
 };
 
 &mt {
@@ -38,29 +40,18 @@
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        ld1: layer_dance_1 {
+        lshftcl: LSHIFT_CAPS_LOCK {
             compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_DANCE_1";
+            label = "LSHIFT_CAPS_LOCK";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&sk RALT>;
+            bindings = <&sk LSHFT>, <&kp CLCK>;
         };
 
-        ld2: layer_dance_2 {
+        rshftcl: RSHIFT_CAPS_LOCK {
             compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_DANCE_2";
+            label = "RSHIFT_CAPS_LOCK";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo 0>, <&to 0>;
-        };
-
-        mosl: mosl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOSL";
-            bindings = <&mo>, <&sl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            bindings = <&kp RSHFT>, <&kp CLCK>;
         };
     };
 };
@@ -81,10 +72,10 @@
         default_layer {
             label = "Base";
             bindings = <
-&gresc          &kp Q  &kp W  &kp E     &kp R      &kp T          &kp Y        &kp U      &kp I      &kp O    &kp P           &bspcdel
-&mt LCTRL TAB   &kp A  &kp S  &kp D     &kp F      &kp G          &kp H        &kp J      &kp K      &kp L    &mt DQT SQT     &mt RCTRL RET
-&mt LGUI COLON  &kp Z  &kp X  &kp C     &kp V      &kp B          &kp N        &kp M      &kp COMMA  &kp DOT  &mt QMARK FSLH  &mt RGUI SEMI
-                              &kp LALT  &kp LSHFT  &lt 1 SPACE    &lt 2 SPACE  &kp RSHFT  &kp RALT
+&gresc          &kp Q  &kp W  &kp E     &kp R     &kp T          &kp Y        &kp U     &kp I      &kp O    &kp P     &bspcdel
+&mt LCTRL TAB   &kp A  &kp S  &kp D     &kp F     &kp G          &kp H        &kp J     &kp K      &kp L    &kp SQT   &mt RCTRL RET
+&mt LGUI COLON  &kp Z  &kp X  &kp C     &kp V     &kp B          &kp N        &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mt RGUI SEMI
+                              &kp LALT  &lshftcl  &lt 1 SPACE    &lt 2 SPACE  &rshftcl  &kp RALT
             >;
         };
 
