@@ -88,8 +88,8 @@
             bindings = <
 &gresc          &kp Q  &kp W  &kp E     &kp R      &kp T          &kp Y        &kp U      &kp I      &kp O    &kp P     &bspcdel
 &mt LCTRL TAB   &kp A  &kp S  &kp D     &kp F      &kp G          &kp H        &kp J      &kp K      &kp L    &kp SQT   &mt RCTRL RET
-&mt LGUI COLON  &kp Z  &kp X  &kp C     &kp V      &kp B          &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RALT SEMI
-                              &kp LALT  &kp LSHFT  &lt 1 SPACE    &lt 2 SPACE  &kp RSHFT  &kp RGUI
+&mt LGUI COLON  &kp Z  &kp X  &kp C     &kp V      &kp B          &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RGUI SEMI
+                              &kp LALT  &kp LSHFT  &lt 1 SPACE    &lt 2 SPACE  &kp RSHFT  &kp RALT
             >;
         };
 
