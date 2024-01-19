@@ -16,9 +16,7 @@
     tapping-term-ms = <300>;
 };
 
-&mt {
-    retro-tap;
-};
+&mt { retro-tap; };
 
 / {
     behaviors {
@@ -82,10 +80,10 @@
 
         lower_layer {
             bindings = <
-&kp GRAVE        &kp N1    &kp N2  &kp N3    &kp N4     &kp N5       &kp N6     &kp N7    &kp N8     &kp N9     &kp N0     &none
-&kp LBKT         &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK  &kp MINUS  &kp EQUAL  &kp RBKT
-&lt 2 LESS_THAN  &none     &none   &none     &none      &none        &none      &none     &none      &kp UNDER  &kp PLUS   &kp GT
-                                   &none     &kp LSHFT  &trans       &trans     &none     &none
+&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9     &kp N0     &trans
+&kp LBKT   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK  &kp MINUS  &kp EQUAL  &kp RBKT
+&kp LT     &none     &none   &none     &none     &none        &none      &none     &none      &kp UNDER  &kp PLUS   &kp GT
+                             &none     &none     &trans       &trans     &none     &none
             >;
 
             label = "Lower";
