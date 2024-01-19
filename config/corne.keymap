@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 &lt {
@@ -93,17 +94,17 @@
             bindings = <
 &kp F1  &kp F2    &kp F3     &kp F4     &kp F5     &kp F6      &kp F7    &kp F8    &kp F9  &kp F10    &kp F11  &kp F12
 &none   &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none    &kp RCTRL
-&none   &none     &none      &none      &none      &none       &none     &none     &none   &none      &none    &to 4
+&none   &none     &none      &none      &none      &none       &none     &none     &none   &none      &none    &none
                              &none      &none      &kp LGUI    &none     &none     &none
             >;
 
             label = "Raise";
         };
 
-        conn_layer {
-            label = "Conn";
+        misc_layer {
+            label = "Misc";
             bindings = <
-&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &none  &none  &none  &none  &none
+&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &to 4  &none  &none  &none  &none  &none
 &out OUT_USB  &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
 &bt BT_CLR    &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
                                           &none         &none         &none           &none  &none  &none
@@ -112,10 +113,10 @@
 
         shapr_layer {
             bindings = <
-&trans     &trans  &trans  &trans    &trans     &trans     &trans     &trans     &trans    &trans  &trans  &trans
-&kp LCTRL  &trans  &trans  &trans    &trans     &trans     &trans     &trans     &trans    &trans  &trans  &kp RCTRL
-&kp LGUI   &trans  &trans  &trans    &trans     &trans     &trans     &trans     &trans    &trans  &trans  &to 0
-                           &kp LALT  &kp LSHFT  &kp RET    &kp SPACE  &kp RSHFT  &kp RALT
+&trans     &trans  &trans  &trans    &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &trans  &trans  &trans    &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp LGUI   &trans  &trans  &trans    &trans     &trans      &trans  &trans  &trans  &trans  &trans  &to 0
+                           &kp LALT  &kt LSHFT  &mkp MB2    &trans  &trans  &trans
             >;
 
             label = "Shapr";
