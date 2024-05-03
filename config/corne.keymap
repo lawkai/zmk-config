@@ -65,6 +65,13 @@
             #binding-cells = <0>;
             bindings = <&kp RSHIFT>, <&tog 2>;
         };
+
+        layer1tap: layer1tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER1TAP";
+            #binding-cells = <0>;
+            bindings = <&sl 1>, <&tog 1>;
+        };
     };
 };
 
@@ -79,7 +86,7 @@
             bindings = <
 &gresc        &kp Q  &kp W  &kp E             &kp R     &kp T      &kp Y      &kp U      &kp I          &kp O    &kp P     &bspcdel
 &mt LGUI TAB  &kp A  &kp S  &kp D             &kp F     &kp G      &kp H      &kp J      &kp K          &kp L    &kp SEMI  &mt RCTRL SQT
-&sl 1         &kp Z  &kp X  &kp C             &kp V     &kp B      &kp N      &kp M      &kp COMMA      &kp DOT  &kp FSLH  &lt 2 BSLH
+&layer1tap    &kp Z  &kp X  &kp C             &kp V     &kp B      &kp N      &kp M      &kp COMMA      &kp DOT  &kp FSLH  &lt 2 BSLH
                             &kp LEFT_CONTROL  &lshftm1  &kp RET    &kp SPACE  &rshiftm2  &kp RIGHT_ALT
             >;
         };
