@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 &lt {
@@ -59,6 +58,13 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&tog 1>;
         };
+
+        rshiftm2: rshiftm2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RSHIFTM2";
+            #binding-cells = <0>;
+            bindings = <&kp RSHIFT>, <&tog 2>;
+        };
     };
 };
 
@@ -78,19 +84,19 @@
         default_layer {
             label = "Base";
             bindings = <
-&gresc        &kp Q  &kp W  &kp E             &kp R     &kp T        &kp Y      &kp U            &kp I          &kp O    &kp P     &bspcdel
-&mt LGUI TAB  &kp A  &kp S  &kp D             &kp F     &kp G        &kp H      &kp J            &kp K          &kp L    &kp SEMI  &mt RCTRL SQT
-&sl 2         &kp Z  &kp X  &kp C             &kp V     &kp B        &kp N      &kp M            &kp COMMA      &kp DOT  &kp FSLH  &lt 1 BSLH
-                            &kp LEFT_CONTROL  &lshftm1  &lt 1 RET    &kp SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT
+&gresc        &kp Q  &kp W  &kp E             &kp R     &kp T      &kp Y      &kp U      &kp I          &kp O    &kp P     &bspcdel
+&mt LGUI TAB  &kp A  &kp S  &kp D             &kp F     &kp G      &kp H      &kp J      &kp K          &kp L    &kp SEMI  &mt RCTRL SQT
+&sl 1         &kp Z  &kp X  &kp C             &kp V     &kp B      &kp N      &kp M      &kp COMMA      &kp DOT  &kp FSLH  &lt 2 BSLH
+                            &kp LEFT_CONTROL  &lshftm1  &kp RET    &kp SPACE  &rshiftm2  &kp RIGHT_ALT
             >;
         };
 
         lower_layer {
             bindings = <
-&kp GRAVE  &none         &none           &none             &none                 &none        &none     &none                  &none              &none            &none      &trans
+&kp GRAVE  &kp F1        &kp F2          &kp F3            &kp F4                &kp F5       &kp F6    &kp F7                 &kp F8             &kp F9           &kp F10    &trans
 &none      &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3      &kp NUMBER_4          &kp N5       &kp N6    &kp N7                 &kp N8             &kp N9           &kp N0     &none
-&tog 0     &kp UNDER     &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp MINUS    &kp PLUS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp EQUAL  &none
-                                         &none             &trans                &trans       &trans    &trans                 &none
+&trans     &kp UNDER     &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp MINUS    &kp PLUS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp EQUAL  &trans
+                                         &kp F11           &trans                &trans       &trans    &trans                 &kp F12
             >;
 
             label = "Lower";
@@ -98,10 +104,10 @@
 
         raise_layer {
             bindings = <
-&kp F1  &kp F2    &kp F3     &kp F4     &kp F5     &kp F6      &kp F7    &kp F8    &kp F9  &kp F10    &kp F11  &kp F12
-&none   &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none    &trans
-&none   &none     &none      &none      &none      &none       &none     &none     &none   &none      &none    &none
-                             &none      &none      &none       &none     &none     &none
+&none  &none  &none  &none  &none  &none    &none  &none     &kp UP    &none      &none  &none
+&none  &none  &none  &none  &none  &none    &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &trans
+&none  &none  &none  &none  &none  &none    &none  &none     &none     &none      &none  &none
+                     &none  &none  &none    &none  &trans    &none
             >;
 
             label = "Raise";
