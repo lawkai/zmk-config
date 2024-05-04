@@ -95,9 +95,9 @@
 
         lower_layer {
             bindings = <
-&to 0      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5         &kp F6     &kp F7    &kp F8     &kp F9     &kp F10    &trans
+&to 0      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5         &kp F6     &kp F7    &kp F8     &kp F9     &kp F10    &kp EQUAL
 &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp N6     &kp N7    &kp N8     &kp N9     &kp N0     &kp DOT
-&trans     &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET  &kp AMPS  &kp ASTRK  &kp MINUS  &kp EQUAL  &kp SLASH
+&kp UNDER  &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET  &kp AMPS  &kp ASTRK  &kp MINUS  &kp SLASH  &kp PLUS
                                        &trans        &trans        &trans         &trans     &trans    &trans
             >;
 
