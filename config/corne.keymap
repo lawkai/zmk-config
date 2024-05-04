@@ -25,7 +25,7 @@
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp DEL>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_RALT)>;
         };
 
         gresc: grave_escape {
@@ -71,6 +71,8 @@
             label = "LAYER1TAP";
             #binding-cells = <0>;
             bindings = <&sl 1>, <&tog 1>;
+
+            tapping-term-ms = <300>;
         };
     };
 };
@@ -84,10 +86,10 @@
         default_layer {
             label = "Base";
             bindings = <
-&gresc        &kp Q  &kp W  &kp E             &kp R     &kp T      &kp Y      &kp U      &kp I          &kp O    &kp P     &bspcdel
-&mt LGUI TAB  &kp A  &kp S  &kp D             &kp F     &kp G      &kp H      &kp J      &kp K          &kp L    &kp SEMI  &mt RCTRL SQT
-&layer1tap    &kp Z  &kp X  &kp C             &kp V     &kp B      &kp N      &kp M      &kp COMMA      &kp DOT  &kp FSLH  &lt 2 BSLH
-                            &kp LEFT_CONTROL  &lshftm1  &kp RET    &kp SPACE  &rshiftm2  &kp RIGHT_ALT
+&gresc        &kp Q  &kp W  &kp E             &kp R           &kp T      &kp Y      &kp U            &kp I          &kp O    &kp P     &bspcdel
+&mt LGUI TAB  &kp A  &kp S  &kp D             &kp F           &kp G      &kp H      &kp J            &kp K          &kp L    &kp SEMI  &mt RCTRL SQT
+&layer1tap    &kp Z  &kp X  &kp C             &kp V           &kp B      &kp N      &kp M            &kp COMMA      &kp DOT  &kp FSLH  &lt 2 BSLH
+                            &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp RET    &kp SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT
             >;
         };
 
