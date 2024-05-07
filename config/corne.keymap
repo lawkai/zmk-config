@@ -88,17 +88,17 @@
             bindings = <
 &gresc        &kp Q  &kp W  &kp E             &kp R           &kp T      &kp Y      &kp U            &kp I          &kp O    &kp P     &bspcdel
 &mt LGUI TAB  &kp A  &kp S  &kp D             &kp F           &kp G      &kp H      &kp J            &kp K          &kp L    &kp SEMI  &mt RCTRL SQT
-&layer1tap    &kp Z  &kp X  &kp C             &kp V           &kp B      &kp N      &kp M            &kp COMMA      &kp DOT  &kp FSLH  &lt 2 BSLH
+&sl 1         &kp Z  &kp X  &kp C             &kp V           &kp B      &kp N      &kp M            &kp COMMA      &kp DOT  &kp FSLH  &lt 2 BSLH
                             &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp RET    &kp SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT
             >;
         };
 
         lower_layer {
             bindings = <
-&to 0      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5         &kp F6     &kp F7     &kp F8     &kp F9   &kp F10    &kp EQUAL
-&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp N6     &kp N7     &kp N8     &kp N9   &kp N0     &kp MINUS
-&trans     &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET  &kp AMPS   &kp ASTRK  &kp DOT  &kp SLASH  &kp PLUS
-                                       &trans        &trans        &trans         &trans     &kp UNDER  &trans
+&to 0      &kp F1        &kp F2        &kp F3            &kp F4          &kp F5                  &kp F6                 &kp F7           &kp F8             &kp F9   &kp F10    &kp EQUAL
+&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4    &kp N5                  &kp N6                 &kp N7           &kp N8             &kp N9   &kp N0     &kp MINUS
+&kp UNDER  &kp EXCL      &kp AT        &kp HASH          &kp DOLLAR      &kp PERCENT             &kp CARET              &kp AMPS         &kp ASTRK          &kp DOT  &kp SLASH  &kp PLUS
+                                       &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET
             >;
 
             label = "Lower";
@@ -106,10 +106,10 @@
 
         raise_layer {
             bindings = <
-&to 0  &none  &none           &kp UP    &none      &none    &none  &none   &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
-&none  &none  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &none    &none  &none   &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&mo 3  &none  &none           &none     &none      &none    &none  &none   &none  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
-                              &none     &trans     &none    &none  &trans  &none
+&to 0  &none  &none           &kp UP    &none      &none    &none     &none     &none   &none      &none  &none
+&none  &none  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &none    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &trans
+&mo 3  &none  &none           &none     &none      &none    &none     &none     &none   &none      &none  &none
+                              &none     &trans     &none    &none     &trans    &none
             >;
 
             label = "Raise";
