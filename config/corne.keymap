@@ -70,10 +70,10 @@
         default_layer {
             label = "Base";
             bindings = <
-&gresc         &kp Q  &kp W  &kp E     &kp R           &kp T           &kp Y      &kp U            &kp I          &kp O    &kp P     &bspcdel
-&mt LCTRL TAB  &kp A  &kp S  &kp D     &kp F           &kp G           &kp H      &kp J            &kp K          &kp L    &kp SEMI  &mt RCTRL SQT
-&lt 1 UNDER    &kp Z  &kp X  &kp C     &kp V           &kp B           &kp N      &kp M            &kp COMMA      &kp DOT  &kp FSLH  &lt 2 BSLH
-                             &kp LALT  &kp LEFT_SHIFT  &mt LGUI RET    &kp SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT
+&gresc         &kp Q  &kp W  &kp E     &kp R           &kp T           &kp Y        &kp U            &kp I          &kp O    &kp P     &bspcdel
+&mt LCTRL TAB  &kp A  &kp S  &kp D     &kp F           &kp G           &kp H        &kp J            &kp K          &kp L    &kp SEMI  &mt RCTRL SQT
+&lt 1 UNDER    &kp Z  &kp X  &kp C     &kp V           &kp B           &kp N        &kp M            &kp COMMA      &kp DOT  &kp FSLH  &lt 1 BSLH
+                             &kp LALT  &kp LEFT_SHIFT  &mt LGUI RET    &lt 2 SPACE  &kp RIGHT_SHIFT  &kp RIGHT_ALT
             >;
         };
 
