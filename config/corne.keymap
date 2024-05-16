@@ -48,15 +48,15 @@
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        as: auto_shift {
+        as_ht: autoshift_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "AS";
-            bindings = <&kp>, <&kp>;
+            label = "AUTOSHIFT_HOLD_TAP";
+            bindings = <&shifted>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <135>;
-            quick-tap-ms = <0>;
             flavor = "tap-preferred";
+            quick-tap-ms = <0>;
         };
     };
 };
@@ -72,6 +72,35 @@
             key-positions = <20 19>;
             layers = <0>;
             timeout-ms = <100>;
+        };
+    };
+
+    macros {
+        shifted: macro_shifted_kp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "MACRO_SHIFTED_KP";
+        };
+
+        as: as {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+
+            label = "AS";
         };
     };
 
@@ -91,10 +120,10 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&kp GRAVE         &kp F1                 &kp F2        &kp F3        &kp F4        &kp F5     &kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &kp BSLH
-&kp LEFT_BRACKET  &as NUMBER_1 NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5     &kp N6   &kp N7  &kp N8  &kp N9  &kp N0   &kp RIGHT_BRACKET
-&trans            &none                  &none         &none         &none         &kp F11    &kp F12  &none   &none   &none   &none    &trans
-                                                       &trans        &trans        &trans     &trans   &trans  &trans
+&kp GRAVE         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5     &kp F6        &kp F7  &kp F8  &kp F9  &kp F10  &kp BSLH
+&as LEFT_BRACKET  &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &as NUMBER_4  &as N5     &as NUMBER_6  &as N7  &as N8  &as N9  &as N0   &as RIGHT_BRACKET
+&trans            &none         &none         &none         &none         &kp F11    &kp F12       &none   &none   &none   &none    &trans
+                                              &trans        &trans        &trans     &trans        &trans  &trans
             >;
         };
 
