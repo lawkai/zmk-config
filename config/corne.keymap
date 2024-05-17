@@ -43,6 +43,8 @@ behaviors {
     };
 };
 
+};
+
 / {
 
 conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -85,12 +87,6 @@ macros {
 
         label = "AS";
     };
-};
-
-macros {
-};
-
-behaviors {
 };
 
 keymap {
@@ -149,4 +145,5 @@ keymap {
     };
 };
 
+};
 };
