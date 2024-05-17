@@ -58,16 +58,22 @@
         combo_sd_open_brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <14 15>;
+            layers = <0>;
+            timeout-ms = <100>;
         };
 
         combo_kl_close_brace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <20 21>;
+            layers = <0>;
+            timeout-ms = <100>;
         };
 
         combo_df_open_bracket {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <15 16>;
+            layers = <0>;
+            timeout-ms = <100>;
         };
     };
 
