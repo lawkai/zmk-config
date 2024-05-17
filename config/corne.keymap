@@ -38,23 +38,13 @@
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        sl1under: sl1under {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SL1UNDER";
-            bindings = <&sl 1>, <&kp UNDER>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         as_ht: autoshift_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "AUTOSHIFT_HOLD_TAP";
             bindings = <&shifted>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
         };
