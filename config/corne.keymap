@@ -9,8 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-
-
 / {
     behaviors {
         bspcdel: backspace_delete {
@@ -38,9 +36,8 @@
             bindings = <&shifted>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             flavor = "tap-preferred";
-            quick-tap-ms = <0>;
         };
     };
 };
