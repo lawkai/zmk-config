@@ -117,10 +117,10 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&kp GRAVE  &kp F1          &kp F2                &kp F3            &kp F4        &kp F5     &kp F6        &kp F7  &kp F8             &kp F9                 &kp F10          &as BSLH
-&trans     &as NUMBER_1    &as NUMBER_2          &as NUMBER_3      &as NUMBER_4  &as N5     &as NUMBER_6  &as N7  &as N8             &as N9                 &as N0           &kp DOUBLE_QUOTES
-&trans     &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &none         &kp F11    &kp F12       &none   &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &trans
-                                                 &trans            &trans        &trans     &trans        &trans  &trans
+&kp GRAVE         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5     &kp F6        &kp F7  &kp F8  &kp F9  &kp F10  &as BSLH
+&kp LEFT_BRACKET  &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &as NUMBER_4  &as N5     &as NUMBER_6  &as N7  &as N8  &as N9  &as N0   &kp RIGHT_BRACKET
+&trans            &none         &none         &none         &none         &kp F11    &kp F12       &none   &none   &none   &none    &trans
+                                              &trans        &trans        &trans     &trans        &trans  &trans
             >;
         };
 
