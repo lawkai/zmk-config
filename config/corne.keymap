@@ -106,7 +106,7 @@
                 <&mo MACRO_PLACEHOLDER &kp LSHIFT>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_SHIFT &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &kp LEFT_SHIFT>;
 
             label = "SHIFTED_MO";
         };
