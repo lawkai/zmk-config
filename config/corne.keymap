@@ -61,7 +61,6 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             retro-tap;
-            require-prior-idle-ms = <125>;
         };
     };
 };
