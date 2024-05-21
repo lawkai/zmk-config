@@ -109,8 +109,8 @@
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER &kp LEFT_SHIFT>;
 
             label = "SHIFTED_MO";
-            wait-ms = <(-1)>;
-            tap-ms = <(-1)>;
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
