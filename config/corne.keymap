@@ -18,7 +18,6 @@
 &mt {
     require-prior-idle-ms = <125>;
     tapping-term-ms = <180>;
-    hold-while-undecided-linger;
     hold-while-undecided;
 };
 
