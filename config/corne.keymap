@@ -56,7 +56,8 @@
         lst: lst {
             compatible = "zmk,behavior-hold-tap";
             label = "layer_shift_tap";
-            bindings = <&shifted_mo>;
+            bindings = <&shifted_mo>, <&none>;
+
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "hold-preferred";
