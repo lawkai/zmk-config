@@ -147,13 +147,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            label = "Base";
+        base2 {
+            label = "Base2";
             bindings = <
-&gresc        &kp Q  &kp W  &kp E             &kp R              &kp T      &kp Y      &kp U  &kp I          &kp O    &kp P     &bspcdel
-&mt LGUI TAB  &kp A  &kp S  &kp D             &kp F              &kp G      &kp H      &kp J  &kp K          &kp L    &kp SEMI  &mt RCTRL SQT
-&lt 1 MINUS   &kp Z  &kp X  &kp C             &kp V              &kp B      &kp N      &kp M  &kp COMMA      &kp DOT  &kp FSLH  &lst 1 EQUAL
-                            &kp LEFT_CONTROL  &sac LEFT_SHIFT 0  &kp RET    &kp SPACE  &std   &kp RIGHT_ALT
+&gresc        &kp Q             &kp W  &kp E             &kp R        &kp T      &kp Y      &kp U         &kp I          &kp O    &kp P                 &bspcdel
+&mt LGUI TAB  &kp A             &kp S  &kp D             &kp F        &kp G      &kp H      &kp J         &kp K          &kp L    &kp SEMI              &mt RCTRL SQT
+&mo 2         &mt LEFT_SHIFT Z  &kp X  &kp C             &kp V        &kp B      &kp N      &kp M         &kp COMMA      &kp DOT  &mt RIGHT_SHIFT FSLH  &mo 2
+                                       &kp LEFT_CONTROL  &lt 1 MINUS  &kp RET    &kp SPACE  &lst 1 EQUAL  &kp RIGHT_ALT
             >;
         };
 
@@ -197,6 +197,16 @@
             >;
 
             label = "Num";
+        };
+
+        default_layer {
+            label = "Base";
+            bindings = <
+&gresc        &kp Q  &kp W  &kp E             &kp R              &kp T      &kp Y      &kp U  &kp I          &kp O    &kp P     &bspcdel
+&mt LGUI TAB  &kp A  &kp S  &kp D             &kp F              &kp G      &kp H      &kp J  &kp K          &kp L    &kp SEMI  &mt RCTRL SQT
+&lt 1 MINUS   &kp Z  &kp X  &kp C             &kp V              &kp B      &kp N      &kp M  &kp COMMA      &kp DOT  &kp FSLH  &lst 1 EQUAL
+                            &kp LEFT_CONTROL  &sac LEFT_SHIFT 0  &kp RET    &kp SPACE  &std   &kp RIGHT_ALT
+            >;
         };
     };
 };
