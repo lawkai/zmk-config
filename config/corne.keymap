@@ -79,7 +79,7 @@
             #binding-cells = <0>;
             bindings = <&mt RIGHT_CONTROL SINGLE_QUOTE>, <&kp RET>;
 
-            tapping-term-ms = <180>;
+            tapping-term-ms = <300>;
         };
     };
 };
