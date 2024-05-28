@@ -29,7 +29,6 @@
             label = "BDEL";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp DEL>;
-
             mods = <(MOD_LSFT|MOD_RSFT|MOD_RALT)>;
         };
 
