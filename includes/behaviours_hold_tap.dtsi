@@ -1,0 +1,34 @@
+
+/ {
+    behaviors {
+        as_ht: autoshift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTOSHIFT_HOLD_TAP";
+            bindings = <&shifted>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "tap-preferred";
+        };
+
+        lst: lst {
+            compatible = "zmk,behavior-hold-tap";
+            label = "layer_shift_tap";
+            bindings = <&shifted_mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "hold-preferred";
+        };
+
+        sac: sac {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_AND_CAPSWORD";
+            bindings = <&kp>, <&caps_word>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            hold-while-undecided;
+        };
+    };
+};
