@@ -25,3 +25,15 @@
         /delete-property/ ignore-modifiers;
     #endif
 };
+
+#ifdef HAS_UROB
+    &num_word {
+        layers = 1;
+        continue-list = <
+            BACKSPACE DELETE DOT COMMA
+            SLASH ASTERISK PLUS MINUS EQUAL DOLLAR
+            RS(SPACE)
+        >;
+        ignore-modifiers;  // modifiers don't deactivate the layer
+    };
+#endif
