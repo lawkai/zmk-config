@@ -30,5 +30,18 @@
             tapping-term-ms = <180>;
             hold-while-undecided;
         };
+        
+        lt_num_word: lt_num_word {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <180>;
+
+            #ifdef HAS_UROB
+                bindings = <&mo>, <&num_word>;
+            #else
+                bindings = <&mo>, <&tog>;
+            #endif
+        };
     };
 };
