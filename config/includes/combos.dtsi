@@ -1,5 +1,17 @@
+#define COMBO_TERM_FAST 35
+#define COMBO_TERM_SLOW 40
+#define COMBO_PRIOR_IDLE 100
+
 / {
     combos { 
         compatible = "zmk,combos"; 
+    
+        combo_tab {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <LT4 LT3>;
+            layers = <BASE>;
+            bindings = <&kp TAB>;
+        };
     };
 };
