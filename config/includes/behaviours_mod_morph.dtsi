@@ -17,5 +17,40 @@
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        
+        /*
+         * Shifted Return underscores + Layer Tap
+         *
+         * Usage: &mm_ret_unds_layer
+         * Tap: Space
+         * LShift-Tap: -
+         * RShift-Tap: _
+         * Hold: Switch layer
+         */
+        mm_ret_minus_layer: mod_morph_minus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&lt LOWER RET>, <&kp MINUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        /*
+         * Shifted Space equal + Layer Tap
+         *
+         * Usage: &mm_spc_eq_layer
+         * Tap: Space
+         * LShift-Tap: +
+         * RShift-Tap: =
+         * Hold: Switch layer
+         */
+        mm_spc_eq_layer: mod_morph_equal {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&lst LOWER SPACE>, <&kp EQUAL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
     };
+    
 };
