@@ -47,7 +47,7 @@
         mm_spc_eq_layer: mod_morph_equal {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&lst LOWER SPACE>, <&kp EQUAL>;
+            bindings = <&kp SPACE>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
