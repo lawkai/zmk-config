@@ -18,7 +18,6 @@
 #include "includes/behaviours_homerow_mods.dtsi"
 #include "includes/behaviours_mod_morph.dtsi"
 #include "includes/behaviours_hold_tap.dtsi"
-#include "includes/behaviours_tap_dance.dtsi"
 
 / {
     keymap {
