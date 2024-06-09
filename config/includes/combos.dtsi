@@ -121,7 +121,7 @@
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LM0 RM0>;
             layers = <BASE>;
-            bindings = <&num_word NUM>;
+            bindings = <&num_word>;
         };
     };
 };

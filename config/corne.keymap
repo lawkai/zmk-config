@@ -8,8 +8,9 @@
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
-#define NUM 3
-#define NAV 4
+#define MISC 3
+#define NUM 4
+#define NAV 5
 
 /* Enable keymap features that require forks */
 #define HAS_UROB
