@@ -30,7 +30,7 @@
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LM2 LM3>;
             layers = <BASE>;
-            bindings = <&kp LPAR>;
+            bindings = <&kp LBRC>;
         };
         
         // close curly bracket
@@ -39,7 +39,7 @@
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <RM2 RM3>;
             layers = <BASE>;
-            bindings = <&kp RPAR>;
+            bindings = <&kp RBRC>;
         };
 
         // open square bracket 
@@ -58,6 +58,38 @@
             key-positions = <RM3 RM4>;
             layers = <BASE>;
             bindings = <&kp RBKT>;
+        };
+        
+        combo_grave {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <LT2 LT3>;
+            layers = <BASE>;
+            bindings = <&kp GRAVE>;
+        };
+        
+        combo_tilde {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <LT1 LT2>;
+            layers = <BASE>
+            bindings = <&kp TILDE>;
+        };
+        
+        combo_bslh {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <RT2 RT3>;
+            layers = <BASE>;
+            bindings = <&kp BSLH>;
+        };
+        
+        combo_pipe {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <RT1 RT2>;
+            layers = <BASE>;
+            bindings = <&kp PIPE>;
         };
         
         combo_caps_word {
