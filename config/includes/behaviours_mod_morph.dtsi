@@ -8,14 +8,14 @@
             mods = <(MOD_LSFT|MOD_RSFT|MOD_RALT)>;
         };
 
-        gresc: grave_escape {
+        mm_tab_esc: tab_escape {
             compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE";
+            label = "TAB_ESC";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp GRAVE>;
+            bindings = <&kp TAB>, <&kp ESC>;
 
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
         
         /*
