@@ -6,6 +6,7 @@
     combos { 
         compatible = "zmk,combos"; 
     
+        // open parenthesis
         combo_lpar {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
@@ -14,6 +15,7 @@
             bindings = <&kp LPAR>;
         };
         
+        // close parenthesis
         combo_rpar {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
@@ -22,18 +24,38 @@
             bindings = <&kp RPAR>;
         };
         
-        combo_lbkt {
+        // open curly bracket
+        combo_lpar {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LM2 LM3>;
             layers = <BASE>;
-            bindings = <&kp LBKT>;
+            bindings = <&kp LPAR>;
         };
         
-        combo_rbkt {
+        // close curly bracket
+        combo_rpar {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <RM2 RM3>;
+            layers = <BASE>;
+            bindings = <&kp RPAR>;
+        };
+
+        // open square bracket 
+        combo_lbkt {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <LM3 LM4>;
+            layers = <BASE>;
+            bindings = <&kp LBKT>;
+        };
+        
+        // close square bracket
+        combo_rbkt {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <RM3 RM4>;
             layers = <BASE>;
             bindings = <&kp RBKT>;
         };
@@ -42,6 +64,14 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LM1 RM1>;
+            layers = <BASE>;
+            bindings = <&caps_word>;
+        };
+        
+        combo_num_word {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <LM0 RM0>;
             layers = <BASE>;
             bindings = <&caps_word>;
         };
