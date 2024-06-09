@@ -12,10 +12,10 @@
             compatible = "zmk,behavior-mod-morph";
             label = "TAB_ESC";
             #binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp ESC>;
+            bindings = <&kp ESC>, <&kp TAB>;
 
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
         
         /*
