@@ -72,7 +72,7 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LT1 LT2>;
-            layers = <BASE>
+            layers = <BASE>;
             bindings = <&kp TILDE>;
         };
         
