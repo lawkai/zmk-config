@@ -25,7 +25,7 @@
         };
         
         // open curly bracket
-        combo_lpar {
+        combo_lbrc {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LM2 LM3>;
@@ -34,7 +34,7 @@
         };
         
         // close curly bracket
-        combo_rpar {
+        combo_rbrc {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <RM2 RM3>;
