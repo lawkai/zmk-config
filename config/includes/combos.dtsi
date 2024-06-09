@@ -92,6 +92,22 @@
             bindings = <&kp PIPE>;
         };
         
+        combo_dollar {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <LM0 LM1>;
+            layers = <BASE>;
+            bindings = <&kp DOLLAR>;
+        };
+        
+        combo_caret {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <RM0 RM1>;
+            layers = <BASE>;
+            bindings = <&kp CARET>;
+        };
+        
         combo_caps_word {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
@@ -105,7 +121,7 @@
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LM0 RM0>;
             layers = <BASE>;
-            bindings = <&caps_word>;
+            bindings = <&num_word>;
         };
     };
 };
