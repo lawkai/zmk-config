@@ -6,20 +6,44 @@
     combos { 
         compatible = "zmk,combos"; 
     
-        combo_tab {
+        combo_lpar {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LM4 LM3>;
-            layers = <BASE>;
-            bindings = <&kp TAB>;
+            key-positions = <LM1 LM2>;
+            layers = <BASE>
+            bindings = <&kp LPAR>;
         };
         
-        combo_at {
+        combo_rpar {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LM3 LB3>;
-            layers = <BASE>;
-            bindings = <&kp AT>;
+            key-positions = <RM1 RM2>;
+            layers = <BASE>
+            bindings = <&kp RPAR>;
+        };
+        
+        combo_lbkt {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <LM2 LM3>;
+            layers = <BASE>
+            bindings = <&kp LBKT>;
+        };
+        
+        combo_rbkt {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <RM2 RM3>;
+            layers = <BASE>
+            bindings = <&kp RBKT>;
+        };
+        
+        combo_caps_word {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            key-positions = <LM1 RM1>;
+            layers = <BASE>
+            bindings = <&caps_word>;
         };
     };
 };
