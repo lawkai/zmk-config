@@ -22,7 +22,7 @@
 
 #ifdef HAS_UROB
     &num_word {
-        layers = NUM;
+        layers = <NUM>;
         continue-list = <
             BACKSPACE DELETE DOT COMMA
             SLASH ASTERISK PLUS MINUS EQUAL DOLLAR
