@@ -95,7 +95,7 @@
         combo_dollar {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LM0 LM1>;
+            key-positions = <RM0 RM1>;
             layers = <BASE>;
             bindings = <&kp DOLLAR>;
         };
@@ -103,7 +103,7 @@
         combo_caret {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RM0 RM1>;
+            key-positions = <LM0 LM1>;
             layers = <BASE>;
             bindings = <&kp CARET>;
         };
@@ -121,7 +121,7 @@
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LM0 RM0>;
             layers = <BASE>;
-            bindings = <&num_word>;
+            bindings = <&num_word NUM>;
         };
     };
 };
