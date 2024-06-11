@@ -1,23 +1,38 @@
 / {
     behaviors {
-        bspcdel: backspace_delete {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BDEL";
-            #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_RALT)>;
-        };
-
+        /*
+         * escape + tab + Layer Tap
+         *
+         * Usage: &mm_tab_esc
+         * Tap: ESC
+         * LShift-Tap: TAB
+         * RShift-Tap: Shifted TAB
+         * Hold: Switch layer
+         */
         mm_tab_esc: tab_escape {
             compatible = "zmk,behavior-mod-morph";
-            label = "TAB_ESC";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp TAB>;
+            bindings = <&lt NAV ESC>, <&kp TAB>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
         
+        /*
+         * backspace delete + Layer Tap
+         *
+         * Usage: &mm_bspc_del
+         * Tap: ESC
+         * Shift-Tap: DEL
+         * Hold: Switch layer
+         */
+        mm_bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    
         /*
          * Shifted Return underscores + Layer Tap
          *
