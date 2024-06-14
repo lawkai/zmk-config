@@ -9,7 +9,7 @@
 
 &sl {
     ignore-modifiers;
-}
+};
 
 
 &caps_word { 
