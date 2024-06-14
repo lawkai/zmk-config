@@ -7,6 +7,11 @@
     require-prior-idle-ms = <150>;
 };
 
+&sl {
+    ignore-modifiers;
+}
+
+
 &caps_word { 
     continue-list = <
         UNDERSCORE MINUS 
