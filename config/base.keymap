@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Personal Includes
-#include "../zmk-nodefree-config/helper.h"
+#include "zmk-helpers/helper.h"
 #include "includes/settings.dtsi"
 #include "includes/conditional_layers.dtsi"
 #include "includes/combos.dtsi"
