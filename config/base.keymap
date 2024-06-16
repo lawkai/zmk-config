@@ -15,10 +15,30 @@
 #include "includes/conditional_layers.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/macros.dtsi"
-#include "includes/behaviours_homerow_mods.dtsi"
+// #include "includes/behaviours_homerow_mods.dtsi"
 #include "includes/behaviours_mod_morph.dtsi"
 #include "includes/behaviours_hold_tap.dtsi"
 #include "includes/behaviours_tap_dance.dtsi"
+
+#define HM_TAPPING_TERM 300
+#define HM_TAPPING_TERM_FAST 200
+#define HM_PRIOR_IDLE 150
+#define HM_QUICK_TAP 200
+
+#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
+    ZMK_HOLD_TAP(NAME, \
+        flavor = "balanced"; \
+        tapping-term-ms = <HM_TAPPING_TERM>; \
+        quick-tap-ms = <HM_QUICK_TAP>; \
+        require-prior-idle-ms = <HM_PRIOR_IDLE>; \
+        bindings = <HOLD>, <TAP>; \
+        hold-trigger-key-positions = <TRIGGER_POS>; \
+        hold-trigger-on-release; \
+    )
+
+MAKE_HRM(hml, &kp, &kp, KEYS_R KEYS_T)  // left-hand HRMs
+MAKE_HRM(hmr, &kp, &kp, KEYS_L KEYS_T)  // right-hand HRMs
+
 
 #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
     ZMK_MOD_MORPH(NAME, \
@@ -39,7 +59,7 @@ SIMPLE_MORPH(n0_morph, SFT, &kp N0, &kp DQT)
 // ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬───────────────────────┬────────────────────────┬────────────────────────╮
     &none                    &kp Q                    &kp W                    &kp E                    &kp R                    &kp T                         &kp Y                    &kp U                    &kp I                    &kp O                   &kp P                    &none
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
-    &none                    &hm_l LGUI A             &hm_l LALT S             &hm_shift_l LSHFT D      &hm_l LCTRL F            &kp G                         &kp H                    &hm_r RCTRL J            &hm_shift_r RSHFT K      &hm_r RALT L            &hm_r RGUI SEMI          &none
+    &none                    &hml LGUI A             &hml LALT S               &hml LSHFT D             &hml LCTRL F             &kp G                         &kp H                    &hmr RCTRL J             &hmr RSHFT K             &hmr RALT L             &hmr  RGUI SEMI          &none
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
     &none                    &kp Z                    &kp X                    &kp C                    &kp V                    &kp B                         &kp N                    &kp M                    &kp COMMA                &kp DOT                 &lt 2 FSLH               &none
 // ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────╯
@@ -54,7 +74,7 @@ SIMPLE_MORPH(n0_morph, SFT, &kp N0, &kp DQT)
 // ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬───────────────────────┬────────────────────────┬────────────────────────╮
     &none                    &kp F1                   &kp F2                   &kp F3                   &kp F4                   &kp F5                        &kp F6                   &kp F7                   &kp F8                   &kp F9                  &kp F10                  &none
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
-    &none                    &hm_l LGUI N1            &hm_l LALT N2            &hm_shift_l LSHFT N3     &hm_l LCTRL N4           &kp N5                        &kp N6                   &hm_r RCTRL N7           &hm_shift_r RSHFT N8     &hm_r RALT n9_morph     &hm_r RGUI n0_morph      &none
+    &none                    &hml LGUI N1             &hml LALT N2             &hml LSHFT N3            &hml LCTRL N4            &kp N5                        &kp N6                   &kp N7                   &kp N8                   &n9_morph               &n0_morph                &none
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
     &none                    &none                    &none                    &none                    &none                    &kp F11                       &kp F12                  &none                    &none                    &none                   &kp SQT                  &none
 // ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────╯
