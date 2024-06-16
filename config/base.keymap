@@ -15,7 +15,6 @@
 #include "includes/conditional_layers.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/macros.dtsi"
-// #include "includes/behaviours_homerow_mods.dtsi"
 #include "includes/behaviours_mod_morph.dtsi"
 #include "includes/behaviours_hold_tap.dtsi"
 #include "includes/behaviours_tap_dance.dtsi"
@@ -50,6 +49,8 @@ MAKE_HRM(hmrn0, &kp, &n0_morph, KEYS_L KEYS_T)  // right-hand HRM for n0
 
 SIMPLE_MORPH(n9_morph, SFT, &kp N9, &kp SQT)
 SIMPLE_MORPH(n0_morph, SFT, &kp N0, &kp DQT)
+
+
 
 / {
     keymap {

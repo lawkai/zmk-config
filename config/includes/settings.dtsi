@@ -16,11 +16,8 @@
     continue-list = <
         UNDERSCORE MINUS 
         BACKSPACE DELETE 
-        LCTRL LALT LGUI LSHFT
-        RCTRL RALT RGUI RSHFT
     >; 
-
-    /delete-property/ ignore-modifiers;
+    ignore-modifiers;
 };
 
 &num_word {

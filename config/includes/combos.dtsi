@@ -2,126 +2,26 @@
 #define COMBO_TERM_SLOW 40
 #define COMBO_PRIOR_IDLE 100
 
-/ {
-    combos { 
-        compatible = "zmk,combos"; 
-    
-        // open parenthesis
-        combo_lpar {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LM2 LM3>;
-            layers = <BASE>;
-            bindings = <&kp LPAR>;
-        };
-        
-        // close parenthesis
-        combo_rpar {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RM2 RM3>;
-            layers = <BASE>;
-            bindings = <&kp RPAR>;
-        };
-        
-        // open curly bracket
-        combo_lbrc {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LM1 LM2>;
-            layers = <BASE>;
-            bindings = <&kp LBRC>;
-        };
-        
-        // close curly bracket
-        combo_rbrc {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RM1 RM2>;
-            layers = <BASE>;
-            bindings = <&kp RBRC>;
-        };
+// parenthesis
+ZMK_COMBO(lpar,   &kp LPAR,       LM2 LM3,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+ZMK_COMBO(rpar,   &kp RPAR,       RM2 RM3,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
 
-        // open square bracket 
-        combo_lbkt {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LM3 LM4>;
-            layers = <BASE>;
-            bindings = <&kp LBKT>;
-        };
-        
-        // close square bracket
-        combo_rbkt {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RM3 RM4>;
-            layers = <BASE>;
-            bindings = <&kp RBKT>;
-        };
-        
-        combo_grave {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LT2 LT3>;
-            layers = <BASE>;
-            bindings = <&kp GRAVE>;
-        };
-        
-        combo_tilde {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LT1 LT2>;
-            layers = <BASE>;
-            bindings = <&kp TILDE>;
-        };
-        
-        combo_bslh {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RT2 RT3>;
-            layers = <BASE>;
-            bindings = <&kp BSLH>;
-        };
-        
-        combo_pipe {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RT1 RT2>;
-            layers = <BASE>;
-            bindings = <&kp PIPE>;
-        };
-        
-        combo_dollar {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RM0 RM1>;
-            layers = <BASE>;
-            bindings = <&kp DOLLAR>;
-        };
-        
-        combo_caret {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LM0 LM1>;
-            layers = <BASE>;
-            bindings = <&kp CARET>;
-        };
-        
-        combo_caps_word {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LM1 RM1>;
-            layers = <BASE>;
-            bindings = <&caps_word>;
-        };
-        
-        combo_num_word {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LM0 RM0>;
-            layers = <BASE>;
-            bindings = <&num_word>;
-        };
-    };
-};
+// curly bracket
+ZMK_COMBO(lbrc,   &kp LBRC,       LM1 LM2,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+ZMK_COMBO(rbrc,   &kp RBRC,       RM1 RM2,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+
+// square bracket
+ZMK_COMBO(lbkt,   &kp LBKT,       LM3 LM4,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+ZMK_COMBO(rbkt,   &kp RBKT,       RM3 RM4,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+
+ZMK_COMBO(tilde,   &kp TILDE,     LT1 LT2,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+ZMK_COMBO(grave,   &kp GRAVE,     LT2 LT3,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+
+ZMK_COMBO(pipe,    &kp PIPE,      RT1 RT2,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+ZMK_COMBO(bslh,    &kp BSLH,      RT2 RT3,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+
+ZMK_COMBO(caret,   &kp CARET,     LM0 LM1,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+ZMK_COMBO(dollar,  &kp DOLLAR,    RM0 RM1,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+
+ZMK_COMBO(caps_word, &caps_word,  LM1 RM1,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+ZMK_COMBO(num_word,  &num_word,   LM0 RM0,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
