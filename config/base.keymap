@@ -50,7 +50,11 @@ MAKE_HRM(hmrn0, &kp, &n0_morph, KEYS_L KEYS_T)  // right-hand HRM for n0
 SIMPLE_MORPH(n9_morph, SFT, &kp N9, &kp SQT)
 SIMPLE_MORPH(n0_morph, SFT, &kp N0, &kp DQT)
 
+SIMPLE_MORPH(lpar_brc, SFT, &kp LPAR, &kp LBRC)
+SIMPLE_MORPH(rpar_brc, SFT, &kp RPAR, &kp RBRC)
 
+SIMPLE_MORPH(lbkt_lt, SFT, &kp LBKT, &kp LT)
+SIMPLE_MORPH(rbkt_gt, SFT, &kp RBKT, &kp GT)
 
 / {
     keymap {
