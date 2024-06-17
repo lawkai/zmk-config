@@ -53,8 +53,20 @@ SIMPLE_MORPH(n0_morph, SFT, &kp N0, &kp DQT)
 SIMPLE_MORPH(lpar_brc, SFT, &kp LPAR, &kp LBRC)
 SIMPLE_MORPH(rpar_brc, SFT, &kp RPAR, &kp RBRC)
 
-SIMPLE_MORPH(lbkt_lt, SFT, &kp LBKT, &kp LT)
-SIMPLE_MORPH(rbkt_gt, SFT, &kp RBKT, &kp GT)
+SIMPLE_MORPH(lbkt_lt, SFT, &kp LBKT, &lt_eq)
+SIMPLE_MORPH(rbkt_gt, SFT, &kp RBKT, &eq_gt)
+
+ZMK_MACRO(eq_gt,
+    wait-ms = <0>;
+    tap-ms = <0>;
+    bindings = <&kp EQUAL &kp GT>;
+)
+
+ZMK_MACRO(lt_eq,
+    wait-ms = <0>;
+    tap-ms = <0>;
+    bindings = <&kp LT &kp EQUAL>;
+)
 
 / {
     keymap {
