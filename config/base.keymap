@@ -9,6 +9,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define BASE 0
+#define LOWER 1
+#define RAISE 2
+#define MISC 3
+#define NUM 4
+
 // Personal Includes
 #include "zmk-helpers/helper.h"
 #include "includes/settings.dtsi"
@@ -18,12 +24,6 @@
 #include "includes/behaviours_mod_morph.dtsi"
 #include "includes/behaviours_hold_tap.dtsi"
 #include "includes/behaviours_tap_dance.dtsi"
-
-#define BASE 0
-#define LOWER 1
-#define RAISE 2
-#define MISC 3
-#define NUM 4
 
 #define HM_TAPPING_TERM 300
 #define HM_TAPPING_TERM_FAST 200
