@@ -12,7 +12,7 @@
         mm_tab_esc: tab_escape {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&lt NAV ESC>, <&kp TAB>;
+            bindings = <&kp ESC>, <&kp TAB>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
