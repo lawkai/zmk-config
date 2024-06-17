@@ -47,6 +47,8 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L KEYS_T)  // right-hand HRMs
 MAKE_HRM(hmrn9, &kp, &n9_morph, KEYS_L KEYS_T)  // right-hand HRM for n9
 MAKE_HRM(hmrn0, &kp, &n0_morph, KEYS_L KEYS_T)  // right-hand HRM for n0
 
+MAKE_HRM(hmrsdt, &kp, &semi_dqt, KEYS_L KEYS_T)  // right-hand HRM for n0
+
 #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
     ZMK_MOD_MORPH(NAME, \
         mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
@@ -59,11 +61,12 @@ SIMPLE_MORPH(n0_morph, SFT, &kp N0, &kp DQT)
 SIMPLE_MORPH(lpar_brc, SFT, &kp LPAR, &kp LBRC)
 SIMPLE_MORPH(rpar_brc, SFT, &kp RPAR, &kp RBRC)
 
-SIMPLE_MORPH(lbkt_lt, SFT, &kp LBKT, &lt_eq)
-SIMPLE_MORPH(rbkt_gt, SFT, &kp RBKT, &eq_gt)
-
 SIMPLE_MORPH(lt_lbkt, SFT, &kp LT, &kp LBKT)
 SIMPLE_MORPH(gt_rbkt, SFT, &kp GT, &kp RBKT)
+
+SIMPLE_MORPH(semi_dqt, SFT, &kp SEMI, &kp DQT)
+SIMPLE_MORPH(dot_colon, SFT, &kp DOT, &kp COLON)
+SIMPLE_MORPH(comma_sqt, SFT, &kp COMMA, &kp SQT)
 
 ZMK_MACRO(eq_gt,
     wait-ms = <0>;
@@ -87,9 +90,9 @@ ZMK_MACRO(lt_eq,
 // ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬───────────────────────┬────────────────────────┬────────────────────────╮
     &none                    &kp Q                    &kp W                    &kp E                    &kp R                    &kp T                         &kp Y                    &kp U                    &kp I                    &kp O                   &kp P                    &none
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
-    &none                    &hml LGUI A              &hml LALT S              &hml LSHFT D             &hml LCTRL F             &kp G                         &kp H                    &hmr RCTRL J             &hmr RSHFT K             &hmr RALT L             &hmr RGUI SEMI          &none
+    &none                    &hml LGUI A              &hml LALT S              &hml LSHFT D             &hml LCTRL F             &kp G                         &kp H                    &hmr RCTRL J             &hmr RSHFT K             &hmr RALT L             &hmrsdt RGUI 0           &none
 // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────┤
-    &none                    &lt NAV Z                &kp X                    &kp C                    &kp V                    &kp B                         &kp N                    &kp M                    &kp COMMA                &kp DOT                 &lt NUM FSLH           &none
+    &none                    &lt NAV Z                &kp X                    &kp C                    &kp V                    &kp B                         &kp N                    &kp M                    &comma_sqt               &dot_colon              &lt NUM FSLH             &none
 // ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼───────────────────────┼────────────────────────┼────────────────────────╯
                                                                                &none                    &mm_tab_esc              &mm_ret_minus_layer           &mm_spc_eq_layer         &mm_bspc_del             &none
 //                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
