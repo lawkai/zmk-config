@@ -4,7 +4,7 @@
         td_esc_tab_nav: td_esc_tab_nav {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mm_tab_esc>, <&sl NAV>;
+            bindings = <&mm_tab_esc>, <&kp TAB>;
         };
     };
 };
