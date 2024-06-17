@@ -32,3 +32,6 @@ ZMK_COMBO(star,    &kp STAR,      RB3 RB4,     BASE, COMBO_TERM_FAST, COMBO_PRIO
 
 ZMK_COMBO(caps_word, &caps_word,  LM1 RM1,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
 ZMK_COMBO(num_word,  &num_word,   LM0 RM0,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
+
+// one shot layer to misc
+ZMK_COMBO(misc_layer,  &sl MISC,  LB4 RB4,     BASE, COMBO_TERM_FAST, COMBO_PRIOR_IDLE)
