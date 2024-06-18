@@ -56,8 +56,8 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R KEYS_T)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L KEYS_T)  // right-hand HRMs
 MAKE_HRM(hmrsdt, &kp, &semi_dqt, KEYS_L KEYS_T)  // right-hand HRM semicolon double quote
 
-MAKE_HRM(hml2, &kp, &kp, KEYS_R KEYS_T)  // left-hand HRMs
-MAKE_HRM(hmr2, &kp, &kp, KEYS_L KEYS_T)  // right-hand HRMs
+MAKE_HRM_WO_HOR(hml2, &kp, &kp, KEYS_R KEYS_T)  // left-hand HRMs
+MAKE_HRM_WO_HOR(hmr2, &kp, &kp, KEYS_L KEYS_T)  // right-hand HRMs
 
 #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
     ZMK_MOD_MORPH(NAME, \
