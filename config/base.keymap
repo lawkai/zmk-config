@@ -65,25 +65,25 @@ SIMPLE_MORPH(comma_sqt, SFT, &kp COMMA, &kp SQT)
 ZMK_MACRO(eq_gt,
     wait-ms = <0>;
     tap-ms = <0>;
-    bindings = <&kp EQUAL &kp GT>;
+    bindings = <&kp KP_EQUAL &kp GT>;
 )
 
 ZMK_MACRO(lt_eq,
     wait-ms = <0>;
     tap-ms = <0>;
-    bindings = <&kp LT &kp EQUAL>;
+    bindings = <&kp LT &kp KP_EQUAL>;
 )
 
 ZMK_MACRO(minus_gt,
     wait-ms = <0>;
     tap-ms = <0>;
-    bindings = <&kp MINUS &kp GT>;
+    bindings = <&kp KP_MINUS &kp GT>;
 )
 
 ZMK_MACRO(lt_minus,
     wait-ms = <0>;
     tap-ms = <0>;
-    bindings = <&kp LT &kp MINUS>;
+    bindings = <&kp LT &kp KP_MINUS>;
 )
 
 / {
