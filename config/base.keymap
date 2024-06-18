@@ -65,7 +65,7 @@ SIMPLE_MORPH(lt_lbkt, SFT, &kp LT, &kp LBKT)
 SIMPLE_MORPH(gt_rbkt, SFT, &kp GT, &kp RBKT)
 
 SIMPLE_MORPH(semi_dqt, SFT, &kp SEMI, &kp DQT)
-SIMPLE_MORPH(dot_colon, SFT, &kp DOT, &kp COLON)
+SIMPLE_MORPH(dot_colon, SFT, &mt GLOBE DOT, &kp COLON)
 SIMPLE_MORPH(comma_sqt, SFT, &kp COMMA, &kp SQT)
 
 ZMK_MACRO(eq_gt,
