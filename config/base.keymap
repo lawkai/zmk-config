@@ -88,7 +88,7 @@ ZMK_MACRO(lt_minus,
 
 ZMK_TAP_DANCE(td_return,
     tapping-term-ms = <200>;
-    bindings = <&mm_ret_minus_layer>, <&kp LS(RET)>
+    bindings = <&mm_ret_minus_layer>, <&kp LS(RET)>;
 )
 
 / {
