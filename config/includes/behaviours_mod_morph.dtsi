@@ -45,8 +45,9 @@
         mm_ret_minus_layer: mod_morph_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&lt FN RET>, <&kp UNDER>;
-            mods = <(MOD_LSFT)>;
+            bindings = <&lt FN RET>, <&kp MINUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
 
         /*
@@ -62,7 +63,8 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&lst FN SPACE>, <&kp EQUAL>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
     };
     
