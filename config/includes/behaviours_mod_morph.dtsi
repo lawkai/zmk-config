@@ -46,7 +46,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&lt FN RET>, <&kp MINUS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
 
@@ -63,8 +63,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&lst FN SPACE>, <&kp EQUAL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
         };
     };
     
