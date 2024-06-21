@@ -18,12 +18,10 @@
 // Personal Includes
 #include "zmk-helpers/helper.h"
 #include "includes/settings.dtsi"
-#include "includes/conditional_layers.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/macros.dtsi"
 #include "includes/behaviours_mod_morph.dtsi"
 #include "includes/behaviours_hold_tap.dtsi"
-#include "includes/behaviours_tap_dance.dtsi"
 
 #define HM_TAPPING_TERM 300
 #define HM_TAPPING_TERM_FAST 200
@@ -84,10 +82,10 @@ ZMK_MACRO(lt_minus,
     bindings = <&kp LT &kp KP_MINUS>;
 )
 
-ZMK_TAP_DANCE(td_return,
-    tapping-term-ms = <200>;
-    bindings = <&mm_ret_minus_layer>, <&kp LS(RET)>;
-)
+// ZMK_TAP_DANCE(td_return,
+//    tapping-term-ms = <200>;
+//    bindings = <&mm_ret_minus_layer>, <&kp LS(RET)>;
+// )
 
 / {
     keymap {

@@ -24,7 +24,7 @@
     layers = <NUM>;
     continue-list = <
         BACKSPACE DELETE DOT COMMA
-        SLASH ASTERISK PLUS MINUS EQUAL DOLLAR
+        SLASH ASTERISK PLUS MINUS EQUAL 
     >;
     ignore-modifiers;  // modifiers don't deactivate the layer
 };
