@@ -1,19 +1,9 @@
 / {
     behaviors {
-        /*
-         * escape + tab + Layer Tap
-         *
-         * Usage: &mm_tab_esc
-         * Tap: ESC
-         * LShift-Tap: TAB
-         * RShift-Tap: Shifted TAB
-         * Hold: Switch layer
-         */
-        mm_tab_esc: tab_escape {
+        mm_tab_shft: tab_escape {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp TAB>;
-
+            bindings = <&sk LSHFT>, <&kp TAB>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };

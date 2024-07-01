@@ -11,6 +11,9 @@
     ignore-modifiers;
 };
 
+&sk {
+    quick-release;
+};
 
 &caps_word { 
     continue-list = <
