@@ -3,7 +3,7 @@
         mm_tab_shft: tab_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&kp TAB>;
+            bindings = <&mt LSHFT ESC>, <&kp TAB>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
