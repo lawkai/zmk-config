@@ -1,6 +1,6 @@
 / {
     behaviors {
-        mm_tab_shft: tab_shift {
+        tab_shft: tab_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mt LSHFT ESC>, <&kp TAB>;
@@ -16,7 +16,7 @@
          * Shift-Tap: DEL
          * Hold: Switch layer
          */
-        mm_bspc_del: backspace_delete {
+        bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp DEL>;
@@ -32,7 +32,7 @@
          * RShift-Tap: _
          * Hold: Switch layer
          */
-        mm_ret_minus_layer: mod_morph_minus {
+        lt_ret_minus: mod_morph_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&lt FN RET>, <&kp MINUS>;
@@ -49,7 +49,7 @@
          * RShift-Tap: =
          * Hold: Switch layer
          */
-        mm_spc_eq_layer: mod_morph_equal {
+        lt_spc_eq: mod_morph_equal {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&lst FN SPACE>, <&kp EQUAL>;

@@ -1,9 +1,24 @@
 /* source keypos definitions */
 #include "zmk-helpers/key-labels/42.h"
 
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
-#define KEYS_T LH2 LH1 LH0 RH0 RH1 RH2
+//#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
+//#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
+//#define KEYS_T LH2 LH1 LH0 RH0 RH1 RH2
+
+#define X_LT  &none // top row, left
+#define X_LM  &none // middle row, left
+#define X_LB  &none // bottom row, left
+#define X_LH  &none // thumb row, left
+
+#define X_MT  &none // top row, middle
+#define X_MM  &none // middle row, middle
+#define X_MB  &none // bottom row, middle
+#define X_MH  &none // thumb row, middle
+
+#define X_LT  &none // top row, right
+#define X_LM  &none // middle row, right
+#define X_LB  &none // bottom row, right
+#define X_LH  &none // thumb row, right
 
 
 /* Enable keymap features that require forks */
