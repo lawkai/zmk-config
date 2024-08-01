@@ -7,11 +7,6 @@
 #define X_LB  &none // bottom row, left
 #define X_LH  &none // thumb row, left
 
-#define X_MT  &none // top row, middle
-#define X_MM  &none // middle row, middle
-#define X_MB  &none // bottom row, middle
-#define X_MH  &none // thumb row, middle
-
 #define X_LT  &none // top row, right
 #define X_LM  &none // middle row, right
 #define X_LB  &none // bottom row, right
