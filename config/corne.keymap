@@ -7,10 +7,10 @@
 #define X_LB  &none // bottom row, left
 #define X_LH  &none // thumb row, left
 
-#define X_LT  &none // top row, right
-#define X_LM  &none // middle row, right
-#define X_LB  &none // bottom row, right
-#define X_LH  &none // thumb row, right
+#define X_RT  &none // top row, right
+#define X_RM  &none // middle row, right
+#define X_RB  &none // bottom row, right
+#define X_RH  &none // thumb row, right
 
 
 /* Enable keymap features that require forks */
