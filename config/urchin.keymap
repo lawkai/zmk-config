@@ -1,0 +1,9 @@
+/* source keypos definitions */
+#include "zmk-helpers/key-labels/34.h"
+
+/* Enable keymap features that require forks */
+#define HAS_UROB
+
+/* source the main keymap */
+#include "base.keymap"
+
