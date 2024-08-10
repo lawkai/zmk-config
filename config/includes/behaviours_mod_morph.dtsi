@@ -37,7 +37,7 @@
             #binding-cells = <0>;
             bindings = <&mt LSHFT RET>, <&kp MINUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
 
         /*
@@ -54,7 +54,7 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
     };
     
