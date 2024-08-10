@@ -8,47 +8,21 @@
             keep-mods = <(MOD_RSFT)>;
         };
         
-        /*
-         * backspace delete + Layer Tap
-         *
-         * Usage: &mm_bspc_del
-         * Tap: ESC
-         * Shift-Tap: DEL
-         * Hold: Switch layer
-         */
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&lst FN BSPC>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings = <&mt RSHFT BSPC>, <&kp DEL>;
+            mods = <(MOD_RSFT)>;
         };
-    
-        /*
-         * Shifted Return underscores + Layer Tap
-         *
-         * Usage: &mm_ret_unds_layer
-         * Tap: Space
-         * LShift-Tap: -
-         * RShift-Tap: _
-         * Hold: Switch layer
-         */
+
         ret_minus: mod_morph_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mt LSHFT RET>, <&kp MINUS>;
+            bindings = <&kp RET>, <&kp MINUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
 
-        /*
-         * Shifted Space equal + Layer Tap
-         *
-         * Usage: &mm_spc_eq_layer
-         * Tap: Space
-         * LShift-Tap: +
-         * RShift-Tap: =
-         * Hold: Switch layer
-         */
         spc_eq: mod_morph_equal {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
