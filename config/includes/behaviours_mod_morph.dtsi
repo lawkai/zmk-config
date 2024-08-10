@@ -28,7 +28,7 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
     };
     
