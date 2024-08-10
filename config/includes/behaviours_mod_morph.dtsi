@@ -32,11 +32,11 @@
          * RShift-Tap: _
          * Hold: Switch layer
          */
-        lt_ret_minus: mod_morph_minus {
+        ret_minus: mod_morph_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mt LSHFT RET>, <&kp MINUS>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
 
@@ -49,11 +49,12 @@
          * RShift-Tap: =
          * Hold: Switch layer
          */
-        lt_spc_eq: mod_morph_equal {
+        spc_eq: mod_morph_equal {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mt LSHFT SPACE>, <&kp EQUAL>;
-            mods = <(MOD_RSFT)>;
+            bindings = <&kp SPACE>, <&kp EQUAL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
     };
     
