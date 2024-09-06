@@ -15,17 +15,17 @@
             mods = <(MOD_RSFT)>;
         };
 
-        ret_eq: mod_morph_minus {
+        spc_eq: mod_morph_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RET>, <&kp EQUAL>;
+            bindings = <&kp SPACE>, <&kp EQUAL>;
             mods = <(MOD_RSFT)>;
         };
 
-        spc_minus: mod_morph_equal {
+        ret_minus: mod_morph_equal {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp MINUS>;
+            bindings = <&kp RET>, <&kp MINUS>;
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
